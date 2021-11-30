@@ -16,13 +16,13 @@
     "transpile": "tsc src/HeatmapLayer.js --out-file lib/HeatmapLayer.js",
     "clean": "rm -rf ./lib/*",
     "test": "cross-env BABEL_ENV=development jest",
-    "test:watch": "yarn run test --watch",
+    "test:watch": "npm run test --watch",
     "lint": "eslint ./src/*.ts*",
     "build:clean": "del cjs esm types",
     "build:cjs": "babel src --out-dir cjs --extensions .ts,.tsx",
     "build:esm": "cross-env BABEL_ENV=esm babel src --out-dir esm --extensions .ts,.tsx",
     "build:types": "tsc --emitDeclarationOnly",
-    "build": "yarn run build:clean && yarn run build:cjs && yarn run build:esm && yarn run build:types"
+    "build": "npm run build:clean && npm run build:cjs && npm run build:esm && npm run build:types"
   },
   "repository": {
     "type": "git",
